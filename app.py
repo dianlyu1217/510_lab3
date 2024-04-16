@@ -109,10 +109,10 @@ def search_model():
                 st.session_state[edit_key] = not st.session_state.get(edit_key, False)
         with show:
             if prompt.favorite:
-                expanderTitle = "️❤️ " + prompt.update_time.astimezone(pytz.timezone('America/Los_Angeles')).strftime(
+                expanderTitle = "️❤️" + prompt.update_time.astimezone(pytz.timezone('America/Los_Angeles')).strftime(
                     '%Y-%m-%d %H:%M:%S') + " | " + prompt.title
             else:
-                expanderTitle = "️🩶 " + prompt.update_time.astimezone(pytz.timezone('America/Los_Angeles')).strftime(
+                expanderTitle = "️🤍" + prompt.update_time.astimezone(pytz.timezone('America/Los_Angeles')).strftime(
                     '%Y-%m-%d %H:%M:%S') + " | " + prompt.title
             open = False
             if st.session_state.get(edit_key):
