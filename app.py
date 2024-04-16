@@ -175,9 +175,8 @@ def render_template_model():
         if st.sidebar.button("Generate And Copy"):
             final_prompt = template_content.format(**values)
             st.sidebar.text_area("Generated Prompt", value=final_prompt, height=200)
-            button_html = f"""<button onclick="navigator.clipboard.writeText('{final_prompt}')">Copy Text</button>"""
-            st.markdown(button_html, unsafe_allow_html=True)
-            st.markdown("Click the button to copy text to clipboard.")
+            st.clipboard.copy(final_prompt)
+            st.sidebar.success("Copied to clipboard!")
 
 
 if __name__ == "__main__":
