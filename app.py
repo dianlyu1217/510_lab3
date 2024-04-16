@@ -175,7 +175,10 @@ def render_template_model():
         if st.sidebar.button("Generate And Copy"):
             final_prompt = template_content.format(**values)
             st.sidebar.text_area("Generated Prompt", value=final_prompt, height=200)
-            st.clipboard.copy(final_prompt)
+            try:
+                st.clipboard.copy(final_prompt)
+            except Exception as e:
+                pass
             st.sidebar.success("Copied to clipboard!")
 
 
