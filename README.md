@@ -9,7 +9,6 @@ streamlit run app.py
 # What's include
 app.py - main running application.  
 .gitignore - tells Git which files or directories to ignore in a project.  
-BostonHousing.csv - csv dataset for application.  
 requirements.txt - list all the dependencies that the project needs to run correctly.  
 README.md - includes the text info of the basic introduction of this GitHub Repository, how to run, what's included, lessons learned, questions / uncertainties.  
 
